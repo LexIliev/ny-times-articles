@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { withRouter } from 'react-router-dom';
 
-import { ArticlesContainer } from './containers';
+import { Navbar } from './components';
+import Routes from './routes';
 
 const App = () => (
   <div>
-    <ArticlesContainer />
+    <Navbar onClick={() => {}} />
+    <Routes />
   </div>
 );
 
-export default App;
+export default withRouter(App);

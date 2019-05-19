@@ -1,22 +1,47 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
+
+import { Article, Loader } from '../../components';
+import { fetchArticlesList } from '../../actions';
+
+import './styles.scss';
 
 class ArticlesContainer extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      title: '',
-    };
+  componentDidMount() {
+    this.props.fetchArticlesList();
   }
 
   render() {
+    const { articles, history } = this.props;
+
+    if (!articles.length) {
+      return <Loader />;
+    }
+
     return (
-      <div>
-        <h1>This is the Articles container.</h1>
+      <div className="container">
+        {articles.length &&
+          articles.map((article) => (
+            <Article
+              history={history}
+              key={article.id}
+              id={article.id}
+              title={article.title}
+              byline={article.byline}
+              published_date={article.published_date}
+              media={article.media}
+            />
+          ))}
       </div>
     );
   }
 }
 
-export default ArticlesContainer;
+const mapStateToProps = (state) => ({
+  articles: state.articles.data,
+});
+
+export default connect(
+  mapStateToProps,
+  { fetchArticlesList },
+)(ArticlesContainer);

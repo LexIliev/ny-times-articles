@@ -1,3 +1,4 @@
 import ArticlesContainer from './ArticlesContainer';
+import ArticleDetailsContainer from './ArticleDetailsContainer';
 
-export { ArticlesContainer };
+export { ArticlesContainer, ArticleDetailsContainer };
