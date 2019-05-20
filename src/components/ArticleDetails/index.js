@@ -18,6 +18,7 @@ const ArticleDetails = ({
     <p className="article-details__byline">{byline}</p>
     <p className="article-details__published-date">{published_date}</p>
     <img
+      className="article-details__image"
       src={
         media[0] &&
         media[0]['media-metadata'] &&

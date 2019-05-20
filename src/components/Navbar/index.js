@@ -1,13 +1,26 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import './styles.scss';
 
 const Navbar = () => (
   <header className="navbar">
-    <div className="navbar__title navbar_item">NY Times Most Popular</div>
-    <div className="navbar__item">
-      <NavLink to="/">Home</NavLink>
+    <img
+      className="navbar__menu"
+      src={require('../../../assets/three-horizontal-lines.svg')}
+      alt="Tree Horizontal Lines Icon"
+    />
+    <h2 className="navbar__title">NY Times Most Popular</h2>
+    <div className="navbar__icons-wrapper">
+      <img
+        className="navbar__item"
+        src={require('../../../assets/search.svg')}
+        alt="Search Icon"
+      />
+      <img
+        className="navbar__item"
+        src={require('../../../assets/dots.svg')}
+        alt="Dots Icon"
+      />
     </div>
   </header>
 );

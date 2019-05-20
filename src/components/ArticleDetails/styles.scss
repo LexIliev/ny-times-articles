@@ -1,14 +1,18 @@
 .article-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 10px;
 }
 
-.article-details__title {
+.article-details__image {
+  width: 95%;
 }
 
-.article-details__abstract {
-}
-
-.article-details__byline {
-}
-
-.article-details__published-date {
+@media screen and (min-width: 640px) {
+  .article-details__image {
+    width: 60%;
+  }
 }

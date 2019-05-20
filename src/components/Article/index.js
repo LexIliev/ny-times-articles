@@ -26,7 +26,11 @@ const Article = ({ id, title, byline, published_date, media, history }) => (
         <p className="article__published-date">{published_date}</p>
       </div>
     </div>
-    <span className="article__icon">></span>
+    <img
+      className="article__icon"
+      src={require('../../../assets/right-arrow.svg')}
+      alt="Arrow Icon"
+    />
   </article>
 );
 

@@ -6,7 +6,7 @@ import Routes from './routes';
 
 const App = () => (
   <div>
-    <Navbar onClick={() => {}} />
+    <Navbar />
     <Routes />
   </div>
 );
