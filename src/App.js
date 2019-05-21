@@ -6,7 +6,7 @@ import Routes from './routes';
 
 const App = () => (
   <div>
-    <Navbar />
+    <Navbar navigationTitle="NY Times Most Popular" />
     <Routes />
   </div>
 );

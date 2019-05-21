@@ -3,7 +3,7 @@ import { fetchArticlesList } from '../api';
 import { FETCH_ARTICLES_LIST } from '../actions/actionTypes';
 import { fetchArticlesListSuccess, fetchArticlesListFail } from '../actions';
 
-const getArticlesList = function*() {
+export const getArticlesList = function*() {
   try {
     const data = yield call(fetchArticlesList);
     yield put(fetchArticlesListSuccess(data.results));

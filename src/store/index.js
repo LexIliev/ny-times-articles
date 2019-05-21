@@ -15,8 +15,7 @@ middlewares.push(sagaMiddleware);
 let middleware = applyMiddleware(...middlewares);
 let router = applyMiddleware(routerMiddleware(history));
 
-// Redux DevTools
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = compose;
 
 export default function configureStore(preloadedState) {
   const store = createStore(

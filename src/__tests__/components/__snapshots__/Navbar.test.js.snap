@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component should match snapshot and render correctly 1`] = `
+<header
+  className="navbar"
+>
+  <img
+    alt="Tree Horizontal Lines Icon"
+    className="navbar__menu"
+    src="/assets/three-horizontal-lines.svg"
+  />
+  <h2
+    className="navbar__title"
+  >
+    Navigation title
+  </h2>
+  <div
+    className="navbar__icons-wrapper"
+  >
+    <img
+      alt="Search Icon"
+      className="navbar__item"
+      src="/assets/search.svg"
+    />
+    <img
+      alt="Dots Icon"
+      className="navbar__item"
+      src="/assets/dots.svg"
+    />
+  </div>
+</header>
+`;

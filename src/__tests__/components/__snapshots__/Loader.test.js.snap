@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader component should match snapshot and render correctly 1`] = `
+<div>
+  <h1
+    className="text"
+  >
+    Loading...
+  </h1>
+</div>
+`;

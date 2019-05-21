@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleDetails component should match snapshot and render correctly 1`] = `
+<div
+  className="article-details"
+>
+  <h3
+    className="article-details__title"
+  >
+    Article title
+  </h3>
+  <p
+    className="article-details__abstract"
+  >
+    Article abstract
+  </p>
+  <p
+    className="article-details__byline"
+  >
+    By Author
+  </p>
+  <p
+    className="article-details__published-date"
+  >
+    2019-05-17
+  </p>
+  <img
+    alt="Article title"
+    className="article-details__image"
+    src="https://media.test.com/images/third-image.jpg"
+  />
+</div>
+`;

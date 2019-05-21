@@ -1,0 +1,14 @@
+{
+  "roots": ["src"],
+  "testURL": "http://localhost:8080/",
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$",
+  "setupFiles": ["./jest.config.json"],
+  "transformIgnorePatterns": ["<rootDir>/node_modules/"],
+  "moduleFileExtensions": ["js", "json"],
+  "moduleNameMapper": {
+    "src/(.*)$": "<rootDir>/src/$1",
+    "\\.(scss|svg)$": "<rootDir>/src/__mocks__/styleMock.js"
+  },
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/**/(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$"]
+}

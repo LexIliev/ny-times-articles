@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ROUTES } from '../../routes/constants';
-import { getRoute } from '../../utils';
+import { getRoute, checkEmpty } from '../../utils';
 
 import './styles.scss';
 
-const Article = ({ id, title, byline, published_date, media, history }) => (
-  <article
-    className="article"
-    onClick={() => history.push(getRoute(ROUTES.DETAILS, { id }))}
-  >
+const Article = ({
+  id,
+  title,
+  byline,
+  published_date,
+  media,
+  icon,
+  history,
+  handleClick,
+}) => (
+  <article className="article" onClick={handleClick}>
     <img
       className="article__image"
       src={
@@ -20,17 +26,15 @@ const Article = ({ id, title, byline, published_date, media, history }) => (
       alt={title}
     />
     <div className="article__wrapper">
-      <h3 className="article__title">{title}</h3>
+      <h3 className="article__title">{title !== '' ? title : ' - '}</h3>
       <div className="article__info-wrapper">
         <p className="article__byline">{byline !== '' ? byline : 'By -'}</p>
-        <p className="article__published-date">{published_date}</p>
+        <p className="article__published-date">
+          {published_date !== '' ? published_date : 'N/A'}
+        </p>
       </div>
     </div>
-    <img
-      className="article__icon"
-      src={require('../../../assets/right-arrow.svg')}
-      alt="Arrow Icon"
-    />
+    <img className="article__icon" src={icon} alt="Arrow Icon" />
   </article>
 );
 
@@ -40,6 +44,8 @@ Article.propTypes = {
   byline: PropTypes.string.isRequired,
   published_date: PropTypes.string.isRequired,
   media: PropTypes.array.isRequired,
+  icon: PropTypes.any.isRequired,
+  handleClick: PropTypes.func,
 };
 
 export default Article;
