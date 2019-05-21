@@ -44,10 +44,34 @@ npm run build
 
 This will create a production version of the app.
 
+`MacOS`: To test the production build, navigate to `./dist` folder and run:
+
+```bash
+python -m SimpleHTTPServer 8080
+```
+
+Open `http://127.0.0.1:8000` in browser.
+
 ## Test the app
 
 Run the following commands to run the unit tests and generate coverage reports:
 
+```bash
+npm run test
+```
+
+To update the snapshots, run:
+
+```bash
+npm run test -- -u
+```
+
+To generate test coverage reports, run:
+
+```bash
+npm run test:coverage
+```
+
 ## License
 
-[MIT]()
+[MIT](https://github.com/LexIliev/ny-times-articles/blob/master/LICENSE)
