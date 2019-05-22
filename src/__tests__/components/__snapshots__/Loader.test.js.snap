@@ -2,10 +2,10 @@
 
 exports[`Loader component should match snapshot and render correctly 1`] = `
 <div>
-  <h1
+  <h2
     className="text"
   >
     Loading...
-  </h1>
+  </h2>
 </div>
 `;

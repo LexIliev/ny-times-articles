@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ROUTES } from '../../routes/constants';
-import { getRoute, checkEmpty } from '../../utils';
 
 import './styles.scss';
 
 const Article = ({
-  id,
   title,
   byline,
   published_date,
   media,
   icon,
-  history,
   handleClick,
 }) => (
   <article className="article" onClick={handleClick}>
@@ -39,7 +35,6 @@ const Article = ({
 );
 
 Article.propTypes = {
-  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   byline: PropTypes.string.isRequired,
   published_date: PropTypes.string.isRequired,

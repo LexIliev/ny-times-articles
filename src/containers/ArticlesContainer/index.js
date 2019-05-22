@@ -24,9 +24,7 @@ class ArticlesContainer extends Component {
         {articles.length &&
           articles.map((article) => (
             <Article
-              history={history}
               key={article.id}
-              id={article.id}
               title={article.title}
               byline={article.byline}
               published_date={article.published_date}

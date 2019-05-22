@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1558475607814" clover="3.2.0">
-  <project timestamp="1558475607814" name="All files">
-    <metrics statements="52" coveredstatements="48" conditionals="18" coveredconditionals="18" methods="14" coveredmethods="12" elements="84" coveredelements="78" complexity="0" loc="52" ncloc="52" packages="11" files="12" classes="12"/>
+<coverage generated="1558507923483" clover="3.2.0">
+  <project timestamp="1558507923483" name="All files">
+    <metrics statements="51" coveredstatements="47" conditionals="18" coveredconditionals="18" methods="14" coveredmethods="12" elements="83" coveredelements="77" complexity="0" loc="51" ncloc="51" packages="10" files="11" classes="11"/>
     <package name="actions">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="actionTypes.js" path="C:\Projects\ny-times-articles\src\actions\actionTypes.js">
@@ -43,9 +43,9 @@
       <metrics statements="3" coveredstatements="3" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
       <file name="index.js" path="C:\Projects\ny-times-articles\src\components\Article\index.js">
         <metrics statements="3" coveredstatements="3" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="41" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
       </file>
     </package>
     <package name="components.ArticleDetails">
@@ -53,8 +53,8 @@
       <file name="index.js" path="C:\Projects\ny-times-articles\src\components\ArticleDetails\index.js">
         <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="6" count="4" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="31" count="4" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
       </file>
     </package>
     <package name="components.Loader">
@@ -90,13 +90,6 @@
         <line num="22" count="2" type="stmt"/>
         <line num="28" count="2" type="stmt"/>
         <line num="35" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="routes">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="constants.js" path="C:\Projects\ny-times-articles\src\routes\constants.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
       </file>
     </package>
     <package name="sagas">

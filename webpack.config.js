@@ -5,6 +5,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
+  output: {
+    publicPath: '/',
+  },
   module: {
     rules: [
       {
