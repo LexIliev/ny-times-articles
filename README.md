@@ -10,6 +10,18 @@ NY Times Most Popular Articles - React App
 
 Build a simple app with React to hit the NY Times Most Popular Articles API and show a list of articles, that shows details when items on the list are tapped (a typical master/ detail app).
 
+## Screenshots
+
+### Desktop
+
+![HomePage](https://raw.githubusercontent.com/LexIliev/ny-times-articles/master/screenshots/home-page.jpg 'Home Page')
+![DetailsPage](https://raw.githubusercontent.com/LexIliev/ny-times-articles/master/screenshots/details-page.jpg 'Details Page')
+
+### Mobile
+
+![HomePageMobile](https://raw.githubusercontent.com/LexIliev/ny-times-articles/master/screenshots/home-page-mobile.jpg 'Home Page Mobile')
+![DetailsPageMobile](https://raw.githubusercontent.com/LexIliev/ny-times-articles/master/screenshots/details-page-mobile.jpg 'Details Page Mobile')
+
 ## Installation
 
 Use _npm_ to install the dependencies inside the root directory.
@@ -71,6 +83,8 @@ To generate test coverage reports, run:
 ```bash
 npm run test:coverage
 ```
+
+![Tests Coverage Report](https://raw.githubusercontent.com/LexIliev/ny-times-articles/master/screenshots/tests-coverage-report.jpg 'Tests Coverage Report')
 
 ## License
 
