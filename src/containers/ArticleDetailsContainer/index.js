@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-import { ArticleDetails, Loader } from '../../components';
 import { fetchArticlesList } from '../../actions';
+import { ArticleDetails, Loader } from '../../components';
 
 class ArticleDetailsContainer extends Component {
   componentDidMount() {
-    if (!this.props.articles.length) {
-      this.props.fetchArticlesList();
+    const { articles, fetchArticlesList } = this.props;
+
+    if (!articles || !articles.length) {
+      fetchArticlesList();
     }
   }
 
   render() {
     // Take the id from the URL
-    const { id } = this.props.match.params;
+    const {
+      articles,
+      match: {
+        params: { id },
+      },
+    } = this.props;
     const article =
-      this.props.articles.length &&
-      this.props.articles.find((el) => el.id.toString() === id);
+      articles.length && articles.find((el) => el.id.toString() === id);
 
-    if (!article) {
+    if (!article || !articles.length) {
       return <Loader />;
     }
 
     return (
-      <div className="container">
+      <div className='container'>
         <ArticleDetails key={id} {...article} />
       </div>
     );
@@ -34,7 +39,6 @@ const mapStateToProps = (state) => ({
   articles: state.articles.data,
 });
 
-export default connect(
-  mapStateToProps,
-  { fetchArticlesList },
-)(ArticleDetailsContainer);
+export default connect(mapStateToProps, { fetchArticlesList })(
+  ArticleDetailsContainer
+);

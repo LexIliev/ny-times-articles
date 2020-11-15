@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import rightArrow from '../../../assets/right-arrow.svg';
+import { fetchArticlesList } from '../../actions';
+import { Article, Loader } from '../../components';
 import { ROUTES } from '../../routes/constants';
 import { getRoute } from '../../utils';
-import { Article, Loader } from '../../components';
-import { fetchArticlesList } from '../../actions';
-
 import './styles.scss';
 
 class ArticlesContainer extends Component {
@@ -15,12 +15,12 @@ class ArticlesContainer extends Component {
   render() {
     const { articles, history } = this.props;
 
-    if (!articles.length) {
+    if (!articles || !articles.length) {
       return <Loader />;
     }
 
     return (
-      <div className="container">
+      <div className='container'>
         {articles.length &&
           articles.map((article) => (
             <Article
@@ -29,7 +29,7 @@ class ArticlesContainer extends Component {
               byline={article.byline}
               published_date={article.published_date}
               media={article.media}
-              icon={require('../../../assets/right-arrow.svg')}
+              icon={rightArrow}
               handleClick={() =>
                 history.push(getRoute(ROUTES.DETAILS, { id: article.id }))
               }
@@ -44,7 +44,6 @@ const mapStateToProps = (state) => ({
   articles: state.articles.data,
 });
 
-export default connect(
-  mapStateToProps,
-  { fetchArticlesList },
-)(ArticlesContainer);
+export default connect(mapStateToProps, { fetchArticlesList })(
+  ArticlesContainer
+);
