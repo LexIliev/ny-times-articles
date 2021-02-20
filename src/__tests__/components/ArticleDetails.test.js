@@ -1,9 +1,5 @@
+import { mount } from 'enzyme';
 import React from 'react';
-import { configure, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({ adapter: new Adapter() });
-
 import { create } from 'react-test-renderer';
 import { ArticleDetails } from '../../components';
 
@@ -79,7 +75,7 @@ describe('ArticleDetails component', () => {
     expect(component.prop('byline')).toMatch('By Author');
     expect(component.prop('published_date')).toMatch('2019-05-17');
     expect(component.prop('media')).toEqual(
-      expect.arrayContaining(mockedMedia),
+      expect.arrayContaining(mockedMedia)
     );
     expect(component.prop('icon')).toEqual({});
   });

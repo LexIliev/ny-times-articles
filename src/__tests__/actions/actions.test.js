@@ -1,14 +1,13 @@
 import {
-  FETCH_ARTICLES_LIST,
-  FETCH_ARTICLES_LIST_SUCCESS,
-  FETCH_ARTICLES_LIST_FAIL,
-} from '../../actions/actionTypes';
-
-import {
   fetchArticlesList,
-  fetchArticlesListSuccess,
   fetchArticlesListFail,
+  fetchArticlesListSuccess,
 } from '../../actions';
+import {
+  FETCH_ARTICLES_LIST,
+  FETCH_ARTICLES_LIST_FAIL,
+  FETCH_ARTICLES_LIST_SUCCESS,
+} from '../../actions/actionTypes';
 
 describe('Test Article list actions', () => {
   test('should fetchArticlesList be a function', () => {
@@ -32,8 +31,9 @@ describe('Test Article list actions', () => {
     expect(action.data).toBe(mockedData);
   });
   test('should fetchArticlesListFail have the correct type and payload', () => {
-    const mockedError = 'An error has occured';
+    const mockedError = 'An error has occurred';
     const action = fetchArticlesListFail(mockedError);
+    expect(action.type).toBe(FETCH_ARTICLES_LIST_FAIL);
     expect(action.error).toBe(mockedError);
   });
 });

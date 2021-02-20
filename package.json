@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode development --env development",
     "build": "webpack --mode production",
-    "test": "jest --config jest.config.json --verbose --watch",
-    "test:coverage": "jest --coverage",
+    "test": "jest --config jest.config.json --verbose --coverage --watchAll",
     "clear": "jest --clearCache"
   },
   "keywords": [],
@@ -45,8 +44,8 @@
     "connected-react-router": "^6.8.0",
     "core-js": "3.9.0",
     "history": "^4.10.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-redux": "^7.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",

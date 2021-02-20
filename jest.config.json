@@ -10,5 +10,17 @@
     "\\.(scss|svg)$": "<rootDir>/src/__mocks__/styleMock.js"
   },
   "collectCoverage": true,
-  "collectCoverageFrom": ["src/**/(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$"]
+  "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
+  "testPathIgnorePatterns": ["<rootDir>/node_modules/"],
+  "coveragePathIgnorePatterns": [
+    "src/containers",
+    "src/api",
+    "src/routes",
+    "src/store",
+    "src/App.js",
+    "src/index.js",
+    "src/reducers/index.js",
+    "src/components/index.js"
+  ],
+  "setupFilesAfterEnv": ["<rootDir>/enzyme.config.js"]
 }
