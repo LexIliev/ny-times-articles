@@ -8,6 +8,7 @@
           "browsers": ["last 2 versions", "safari >= 11"]
         },
         "useBuiltIns": "usage",
+        "corejs": "3.7.0",
         "modules": "commonjs"
       }
     ]

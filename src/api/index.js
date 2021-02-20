@@ -19,5 +19,5 @@ const API_ENDPOINT = `https://api.nytimes.com/svc/mostpopular/v2/`;
 export const fetchArticlesList = () =>
   request(
     `${API_ENDPOINT}/${SECTION}/${PERIOD}.json?api-key=${API_KEY}`,
-    'GET',
+    'GET'
   );

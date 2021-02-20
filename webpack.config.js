@@ -1,4 +1,3 @@
-const path = require('path');
 const isDevelopment = process.env.NODE_ENV !== 'production';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -28,14 +27,11 @@ module.exports = {
       },
       {
         test: /\.s(a|c)ss$/,
-        loader: [
+        use: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              // modules: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-              camelCase: true,
               sourceMap: isDevelopment,
             },
           },
@@ -50,7 +46,7 @@ module.exports = {
       {
         test: /\.s(a|c)ss$/,
         exclude: /\.(s(a|c)ss)$/,
-        loader: [
+        use: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
@@ -63,11 +59,15 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: './assets/',
-        },
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              outputPath: './assets/',
+            },
+          },
+        ],
       },
     ],
   },
