@@ -1,12 +1,12 @@
 import { expectSaga, testSaga } from 'redux-saga-test-plan';
-import { takeLatest, call } from 'redux-saga/effects';
-import reducer, { initialState } from '../../reducers/articleReducer';
-import { fetchArticlesList } from '../../api';
-import rootSaga, { getArticlesList } from '../../sagas';
-import * as actions from '../../actions';
-import articlesResponse from '../../__mocks__/articlesList.json';
 import { throwError } from 'redux-saga-test-plan/providers';
+import { call } from 'redux-saga/effects';
+import * as actions from '../../actions';
 import { FETCH_ARTICLES_LIST } from '../../actions/actionTypes';
+import { fetchArticlesList } from '../../api';
+import reducer from '../../reducers/articleReducer';
+import rootSaga, { getArticlesList } from '../../sagas';
+import articlesResponse from '../../__mocks__/articlesList.json';
 
 describe('Article Sagas', () => {
   beforeEach(() => {

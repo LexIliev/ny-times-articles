@@ -1,9 +1,5 @@
+import { shallow } from 'enzyme';
 import React from 'react';
-import { configure, mount, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({ adapter: new Adapter() });
-
 import { create } from 'react-test-renderer';
 import { Navbar } from '../../components';
 
